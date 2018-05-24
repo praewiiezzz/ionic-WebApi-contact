@@ -17,7 +17,7 @@ export class GetArrayJson {
 
   contacts = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http : HttpClient) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient) {
   }
 
   sendRequest() {
@@ -25,12 +25,13 @@ export class GetArrayJson {
     let url = 'http://www.nextflow.in.th/example/phonegap/ng-jsonp/simple-array.php';
 
     this.http.get(url)
-        .subscribe((data:any) => {
+      .subscribe((data: any) => {
+        // Assign data (array type) to property
+        console.log(data);
+        this.contacts = data;
 
-      // Assign data (array type) to property
-      
 
-    });
+      });
   }
 
 

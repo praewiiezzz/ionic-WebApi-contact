@@ -1,0 +1,30 @@
+<!--
+  Generated template for the RandomUserPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>RandomUser</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="sendRequest()"><ion-icon name="refresh"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let people of contacts">
+      <h2>{{people.name.first}} {{people.name.last}}</h2>
+      <p>{{people.phone}}</p>
+      <ion-avatar item-left>
+        <img src={{people.picture.medium}}>
+      </ion-avatar>
+      <!-- <p>{{people.tel}}</p> -->
+    </ion-item>
+  </ion-list>
+</ion-content>

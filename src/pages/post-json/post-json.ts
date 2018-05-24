@@ -27,13 +27,16 @@ export class PostJson {
     let jsonData;
 
     // Create JSON object from username & email
-    
+    jsonData = {
+      name : username
+      , email : email
+    };
 
     // Pass JSON as 2nd parameter
     this.http.post('http://www.nextflow.in.th/example/phonegap/post/post-object.php', jsonData)
         .subscribe((data:any) => {
           
-          // this.returnMessage = data.message;
+          this.returnMessage = data.message;
         
         });
   }

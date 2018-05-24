@@ -23,4 +23,7 @@ export class HomePage {
     this.navCtrl.push('PostJson');
   }
 
+  randomMe() {
+    this.navCtrl.push('RandomUserPage');
+  }
 }
