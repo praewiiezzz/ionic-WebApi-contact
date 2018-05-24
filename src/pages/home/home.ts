@@ -11,4 +11,16 @@ export class HomePage {
 
   }
 
+  openGetSimpleJSON() {
+    this.navCtrl.push('GetSimpleJson');
+  }
+
+  openGetArrayJSON() {
+    this.navCtrl.push('GetArrayJson');
+  }
+
+  openPostJSON() {
+    this.navCtrl.push('PostJson');
+  }
+
 }
